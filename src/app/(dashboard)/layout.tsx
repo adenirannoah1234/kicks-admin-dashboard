@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import TopNav from './components/TopNav';
 import dynamic from 'next/dynamic';
 
-const Crumb = dynamic(() => import('./components/crumb'), { ssr: false });
+const Crumb = dynamic(() => import('./components/Crumb'), { ssr: false });
 export default function DashboardLayout({
   children,
 }: {

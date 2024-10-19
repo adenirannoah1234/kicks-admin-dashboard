@@ -12,7 +12,7 @@ type TimeframeType = 'WEEKLY' | 'MONTHLY' | 'YEARLY';
 const SalesGraph: React.FC = () => {
   const [timeframe, setTimeframe] = useState<TimeframeType>('MONTHLY');
 
-  // Simulated data for different timeframes
+  
   const data: Record<TimeframeType, number[]> = {
     WEEKLY: [100, 150, 200, 180, 220, 190],
     MONTHLY: [500, 800, 1000, 1200, 900, 1500],
