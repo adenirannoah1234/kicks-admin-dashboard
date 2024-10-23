@@ -21,8 +21,11 @@ import {
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const OrdersTable = () => {
+  const router = useRouter();
+
   const data = [
     {
       product: 'Adidas Ultra boost',
@@ -182,6 +185,8 @@ const OrdersTable = () => {
                   fontSize="0.938rem"
                   fontWeight={400}
                   textAlign={'center'}
+                  cursor={'pointer'}
+                  onClick={() => router.push(`/order-list/orderDetailsId`)}
                 >
                   {order.orderId}
                 </Td>

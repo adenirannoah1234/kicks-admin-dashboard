@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   Box,
@@ -7,7 +9,13 @@ import {
   Text,
   IconButton,
   Flex,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Grid,
 } from '@chakra-ui/react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import OrdersTable from './components/OrdersTable';
 import { PageBreadcrumb } from '../components/BreadCrumb';
 import { IoCalendarOutline } from 'react-icons/io5';
@@ -22,20 +30,42 @@ const page = () => {
           </Heading>
           <PageBreadcrumb />
         </Box>
+        <Box>
+          <Flex>
+            <IconButton
+              aria-label="calendar"
+              bg={'#e8e8e3ff'}
+              pb={3}
+              color={'#000000ff'}
+              icon={<IoCalendarOutline />}
+            />
 
-        <Flex>
-          <IconButton
-            aria-label="calendar"
-            bg={'#e8e8e3ff'}
-            pb={3}
-            color={'#000000ff'}
-            icon={<IoCalendarOutline />}
-          />
+            <Text color={'#000000ff'} fontSize={'md'} fontWeight={'semibold'}>
+              Feb 16, 2022 - Feb 20, 2022
+            </Text>
+          </Flex>
+          <Menu size={'lg'}>
+            <MenuButton
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              bg="#fafafaff"
+              size={'lg'}
+              gap={4}
+              ml={10}
 
-          <Text color={'#000000ff'} fontSize={'md'} fontWeight={'semibold'}>
-            Feb 16, 2022 - Feb 20, 2022
-          </Text>
-        </Flex>
+              // border="1px solid black"
+            >
+              Change Status
+            </MenuButton>
+            <MenuList>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
       </Flex>
       <OrdersTable />
     </Box>

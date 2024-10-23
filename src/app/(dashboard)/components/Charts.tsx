@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
-import { Box, Button, ButtonGroup, Heading, Flex } from '@chakra-ui/react';
+import { Box, Button, Heading, Flex } from '@chakra-ui/react';
 import { ApexOptions } from 'apexcharts';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -12,7 +12,6 @@ type TimeframeType = 'WEEKLY' | 'MONTHLY' | 'YEARLY';
 const SalesGraph: React.FC = () => {
   const [timeframe, setTimeframe] = useState<TimeframeType>('MONTHLY');
 
-  
   const data: Record<TimeframeType, number[]> = {
     WEEKLY: [100, 150, 200, 180, 220, 190],
     MONTHLY: [500, 800, 1000, 1200, 900, 1500],
