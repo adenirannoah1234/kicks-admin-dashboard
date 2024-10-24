@@ -186,7 +186,7 @@ const OrdersTable = () => {
                   fontWeight={400}
                   textAlign={'center'}
                   cursor={'pointer'}
-                  onClick={() => router.push(`/order-list/orderDetailsId`)}
+                  onClick={() => router.push(`/order-list/id`)}
                 >
                   {order.orderId}
                 </Td>

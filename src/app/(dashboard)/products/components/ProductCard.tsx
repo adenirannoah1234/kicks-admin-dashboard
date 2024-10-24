@@ -18,13 +18,14 @@ import {
   IconButton,
   Center,
 } from '@chakra-ui/react';
-// import { MoreVertical } from 'react-feather'
+import { useRouter } from 'next/navigation';
 import { IoIosMore } from 'react-icons/io';
 
 import { FiArrowUp } from 'react-icons/fi';
 import Image from 'next/image';
 
 const ProductCard = () => {
+  const router = useRouter();
   const products = [
     {
       name: 'Adidas Ultra boost',
@@ -187,6 +188,9 @@ const ProductCard = () => {
                 <MenuList>
                   <MenuItem>Edit</MenuItem>
                   <MenuItem>Delete</MenuItem>
+                  <MenuItem onClick={() => router.push(`/products/id`)}>
+                    View
+                  </MenuItem>
                 </MenuList>
               </Menu>
             </Flex>
