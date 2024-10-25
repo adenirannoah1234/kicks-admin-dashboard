@@ -20,9 +20,10 @@ import {
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
 import { IoIosMore } from 'react-icons/io';
-
+// import { HStack, Tag } from '@/components/ui/tag';
 import { FiArrowUp } from 'react-icons/fi';
 import Image from 'next/image';
+import Pagination from '../../components/Pagination';
 
 const ProductCard = () => {
   const router = useRouter();
@@ -278,6 +279,9 @@ const ProductCard = () => {
           </Box>
         ))}
       </Grid>
+      <Box>
+        <Pagination />
+      </Box>
     </Box>
   );
 };

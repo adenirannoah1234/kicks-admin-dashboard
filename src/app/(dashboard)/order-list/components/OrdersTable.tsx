@@ -208,7 +208,7 @@ const OrdersTable = () => {
                 </Td>
                 <Td>
                   <Flex align="center">
-                    <Avatar size="sm" name={order.customerName} />
+                    <Avatar size="sm" name={order.customerName} mr={3} />
                     <Spacer />
                     <Text
                       color="#000000ff"

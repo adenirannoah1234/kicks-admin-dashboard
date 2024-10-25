@@ -5,8 +5,10 @@ import { Box, Button, Center, Flex, Heading, Text } from '@chakra-ui/react';
 import ProductCard from './components/ProductCard';
 import { PageBreadcrumb } from '../components/BreadCrumb';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+  const router = useRouter();
   return (
     <Box height="100%" position="relative">
       <Flex py={6} justifyContent="space-between" alignItems="center">
@@ -21,7 +23,7 @@ const page = () => {
           bg={'#242422ff'}
           variant="solid"
           _hover={{ bg: '#242422ff' }}
-          onClick={() => alert('Add Product')}
+          onClick={() => router.push('/products/AddProducts')}
         >
           Add Product
         </Button>

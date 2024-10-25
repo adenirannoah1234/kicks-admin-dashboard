@@ -19,6 +19,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 import OrdersTable from './components/OrdersTable';
 import { PageBreadcrumb } from '../components/BreadCrumb';
 import { IoCalendarOutline } from 'react-icons/io5';
+import Pagination from '../components/Pagination';
 
 const page = () => {
   return (
@@ -68,6 +69,7 @@ const page = () => {
         </Box>
       </Flex>
       <OrdersTable />
+      <Pagination />
     </Box>
   );
 };

@@ -15,12 +15,7 @@ export default function DashboardLayout({
         <Sidebar />
       </Box>
 
-      <Flex
-        direction="column"
-        flex="1"
-        minWidth={0} // This is crucial for flex item overflow handling
-        height="100%"
-      >
+      <Flex direction="column" flex="1" minWidth={0} height="100%">
         <Box as="header" flexShrink={0}>
           <TopNav />
         </Box>
@@ -49,6 +44,9 @@ export default function DashboardLayout({
           }}
         >
           {children}
+          {/* <Flex py={10}>
+            <Text> 2024 Kicks Dashboard</Text>
+          </Flex> */}
         </Box>
       </Flex>
     </Flex>

@@ -17,7 +17,7 @@ import {
   Tag,
   HStack,
 } from '@chakra-ui/react';
-import ProductGallery from '../components/ProductGallery';
+import AddProductGallery from './component/AddProductGaller';
 import { PageBreadcrumb } from '../../components/BreadCrumb';
 
 const page = () => {
@@ -27,10 +27,11 @@ const page = () => {
     <Box>
       <Box py={5}>
         <Text fontSize={'lg'} fontWeight={'bold'}>
-          Product Details
+          Add Product
         </Text>
         <PageBreadcrumb />
       </Box>
+
       <Box bg={'#ffffffff'} p={5} rounded={'lg'}>
         <Flex gap={6}>
           <Stack spacing={5} flex={1}>
@@ -168,8 +169,8 @@ const page = () => {
             </FormControl>
           </Stack>
           <Box flex={1}>
-            <Image src="/Frame 14.png" height={400} alt="shoe" width={500} />
-            <ProductGallery />
+            <Image src="/Frame 15.png" height={400} alt="shoe" width={500} />
+            <AddProductGallery />
           </Box>
         </Flex>
       </Box>

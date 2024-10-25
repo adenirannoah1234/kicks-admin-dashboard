@@ -22,10 +22,10 @@ import { GoCheckCircleFill } from 'react-icons/go';
 
 const ProductGallery = () => {
   const [selectedFiles, setSelectedFiles] = useState([
-    { id: 1, name: 'Product thumbnail.png', preview: '/shoe1.png' },
-    { id: 2, name: 'Product thumbnail.png', preview: '/shoe1.png' },
-    { id: 3, name: 'Product thumbnail.png', preview: '/shoe1.png' },
-    { id: 4, name: 'Product thumbnail.png', preview: '/shoe1.png' },
+    { id: 1, name: 'Product thumbnail.png', preview: '/add.png' },
+    { id: 2, name: 'Product thumbnail.png', preview: '/add.png' },
+    { id: 3, name: 'Product thumbnail.png', preview: '/add.png' },
+    { id: 4, name: 'Product thumbnail.png', preview: '/add.png' },
   ]);
 
   const borderColor = useColorModeValue('gray.200', 'gray.600');
@@ -95,21 +95,9 @@ const ProductGallery = () => {
           </Flex>
         ))}
       </VStack>
-
-      {/* Action Buttons */}
       <ButtonGroup spacing={3} mt={6} width="full">
-        <Button
-          colorScheme="blackAlpha"
-          bg="black"
-          color="white"
-          _hover={{ bg: 'gray.800' }}
-          flex={1}
-          size={'md'}
-        >
-          UPDATE
-        </Button>
-        <Button colorScheme="red" flex={1} size={'md'}>
-          DELETE
+        <Button bg={'#242422ff'} flex={1} size={'md'} color={'white'}>
+          ADD
         </Button>
         <Button
           variant="outline"
